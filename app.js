@@ -7,11 +7,12 @@ var bodyParser = require('body-parser');
 var Web3 = require('web3');
 
 //  Connect web3 instance to blockchain provider or TestRPC localhost:8545
-var web3 = new Web3(Web3.givenProvider || new Web3.providers.WebsocketProvider("ws://localhost:8545"));
+//  var web3 = new Web3(Web3.givenProvider || new Web3.providers.WebsocketProvider("ws://localhost:8545"));
 
 //  Import web page route resources
 var index = require('./routes/index');
 var users = require('./routes/users');
+var account = require('./routes/account');
 
 var app = express();
 
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //  Set paths to routes
 app.use('/', index);
 app.use('/users', users);
+app.use('/account', account);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
