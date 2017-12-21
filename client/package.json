@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 3002",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3002",
     "link-contracts": "cd lib && ln -s ../../build/contracts contracts"
   },
   "dependencies": {
