@@ -1,7 +1,5 @@
 const SimpleStorage = artifacts.require('./SimpleStorage.sol');
-const BeaconAppToken = artifacts.require('./BeaconAppToken.sol');
 
-module.exports = function (deployer) {
+module.exports = function (deployer, accounts) {
   deployer.deploy(SimpleStorage);
-  deployer.deploy(BeaconAppToken);
 }
